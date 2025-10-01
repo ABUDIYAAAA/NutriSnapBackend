@@ -81,7 +81,7 @@ WSGI_APPLICATION = "mysite.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("PGDB", "mydb"),
+        "NAME": os.environ.get("PGDATABASE", "mydb"),
         "USER": os.environ.get("PGUSER", "myuser"),
         "PASSWORD": os.environ.get("PGPASSWORD", "mypass"),
         "HOST": os.environ.get("PGHOST", "localhost"),
