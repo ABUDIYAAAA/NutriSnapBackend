@@ -7,10 +7,10 @@ from .models import Meal, FoodItem
 
 import google.generativeai as genai
 from groq import Groq
-
+import os
 
 genai.configure(api_key="AIzaSyBDk7ceBZ1u9UeDVf8vZJ7V77rNyUMuiKU")
-groq_client = Groq(api_key="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")
+groq_client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 
 @shared_task
